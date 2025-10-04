@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>iyel</title>
+  <style>
+    :root{
+      --blue: #EAF6FF; /* pastel blue */
+      --pink: #FFD6E0; /* pastel pink */
+      --yellow: #FFF2C2; /* pastel yellow */
+      --white: #ffffff;
+      --shadow: 0 8px 20px rgba(0,0,0,0.05);
+      font-family: 'Poppins', system-ui, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;
+      background: linear-gradient(160deg,var(--blue), var(--pink) 60%, var(--yellow));
+      display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+      padding:28px;color:#2d3b40;
+      position:relative;
+    }
+    h1{
+      font-size:28px;margin-bottom:22px;color:#2a3d50;text-align:center
+    }.wrap{width:100%;max-width:980px}
+
+/* Decorative pastel circles */
+.decor{
+  position:absolute;border-radius:50%;z-index:0;opacity:0.35;filter:blur(20px);
+}
+.decor.blue{background:var(--blue);width:160px;height:160px;top:20px;left:20px;}
+.decor.pink{background:var(--pink);width:120px;height:120px;bottom:40px;right:30px;}
+.decor.yellow{background:var(--yellow);width:100px;height:100px;top:200px;right:80px;}
+
+/* Letter card */
+.letter-card{
+  position:relative;z-index:1;
+  background:var(--yellow);
+  border-radius:20px;padding:22px;display:flex;gap:18px;align-items:center;box-shadow:var(--shadow);
+  margin-bottom:26px;
+}
+.letter-card img{
+  width:80px;height:80px;border-radius:14px;object-fit:cover;
+}
+.letter-content{flex:1}
+.title{font-size:20px;margin:0 0 6px 0}
+.subtitle{margin:0;color:#555;font-size:13px}
+
+.open-btn{margin-top:12px;padding:10px 14px;border-radius:12px;background:var(--pink);border:0;cursor:pointer;color:#333;font-weight:600;box-shadow:var(--shadow)}
+
+/* Modal */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:grid;place-items:center;padding:28px;opacity:0;pointer-events:none;transition:opacity .25s;z-index:10}
+.overlay.open{opacity:1;pointer-events:auto}
+.modal{
+  width:100%;max-width:760px;background:var(--white);border-radius:16px;padding:26px;box-shadow:0 30px 80px rgba(15,30,40,0.25);transform:translateY(12px);transition:transform .28s;
+}
+.overlay.open .modal{transform:none}
+
+.modal .close{float:right;background:transparent;border:0;font-size:18px;padding:6px;cursor:pointer}
+.modal h2{margin:0 0 6px 0}
+.modal p{color:#31485a;line-height:1.6}
+.signature{margin-top:18px;text-align:right;color:#777;font-style:italic}
+
+/* Playlist */
+.section{margin-top:20px;position:relative;z-index:1}
+.section h4{margin-bottom:12px;color:#2a3d50}
+
+.playlist{display:flex;flex-direction:column;gap:18px}
+.track iframe{border:none;width:100%;height:80px;border-radius:14px;box-shadow:var(--shadow)}
+
+/* Photos */
+.photos{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.photo{height:120px;border-radius:12px;overflow:hidden;position:relative;background:var(--blue);display:flex;align-items:end;padding:10px;color:#06303d;box-shadow:var(--shadow)}
+.photo .label{font-weight:600;background:rgba(255,255,255,0.6);padding:6px 8px;border-radius:8px;font-size:12px}
+
+@media (max-width:640px){
+  .letter-card{flex-direction:column;align-items:stretch}
+  .letter-card img{width:72px;height:72px}
+  .modal{padding:18px}
+}
+
+  </style>
+</head>
+<body>
+  <div class="decor blue"></div>
+  <div class="decor pink"></div>
+  <div class="decor yellow"></div>  <h1>SELAMAT DATANG IYEELL BIEFEF ♡</h1>
+  <div class="wrap">
+    <div class="letter-card">
+      <img src="MISSEY.JPG"/>
+      <div class="letter-content">
+        <h3 class="title">Surat Kecil untuk Kamu</h3>
+        <p class="subtitle">Ketuk tombol dibawah untuk buka ya iyelll.</p>
+        <button class="open-btn" id="openLetter">Buka akuu </button>
+      </div>
+    </div><div class="section">
+  <h4>Lagu 4 you</h4>
+  <div class="Lagu 4 you">
+    <!-- Spotify embeds -->
+    <div class="track">
+      <iframe src="https://open.spotify.com/embed/track/7aSyG7cskkG3zhfO2JLxq3?utm_source=generator" allow="encrypted-media"></iframe>
+    </div>
+    <div class="track">
+      <iframe src="https://open.spotify.com/embed/track/5K3mMpiWtKvCplBl7ov4Q9?utm_source=generator" allow="encrypted-media"></iframe>
+    </div>
+    <div class="track">
+      <iframe src="https://open.spotify.com/embed/track/7F5oktn5YOsR9eR5YsFtqb?utm_source=gnerator" allow="encrypted-media"></iframe>
+    </div>
+    <div class="track">
+      <iframe src="https://open.spotify.com/embed/track/0xnzQ3Ek5X5r2pcbwIEQdc?utm_source=generator" allow="encrypted-media"></iframe>
+    </div>
+    <div class="track">
+      <iframe src="https://open.spotify.com/embed/track/5Egm9N7FnzsThl1CFXB2mm?utm_source=generator" allow="encrypted-media"></iframe>
+    </div>
+    <div class="track">
+      <iframe src="https://open.spotify.com/embed/track/6B3klWr5zdlEUdqFm89Czb?utm_source=generator" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h4>Moment we capture</h4>
+  <div class="photos">
+    <div class="photo" style="background:var(--pink);"><div class="label">Pantai</div></div>
+    <div class="photo" style="background:var(--yellow);"><div class="label">Hutan</div></div>
+    <div class="photo" style="background:var(--blue);"><div class="label">Sunset</div></div>
+    <div class="photo" style="background:var(--pink);"><div class="label">Jalan</div></div>
+  </div>
+</div>
+
+  </div>  <!-- Letter modal -->  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+      <button class="close" id="closeBtn">✕</button>
+      <h2 id="letterTitle">Untuk iyel — Sebuah Surat Kecil</h2>
+      <p>Hai Iyell, —
+        <br><br>
+        mau tmi dikit dehh, kayaknya kalau buat di medium udah biasa bangett yaa..., jadi aku buat ini pakai coding biar luar biasa. biar kerasa juga effort nya gimana, walaupun aku benci banget sama coding tapi apa sih yang engga untuk biefef ku yang satu inii, berkat aku tau dan inget dikit-dikit tentang coding yang selama ini aku pelajari aku bisa buat web ini untuk kamuu yeayyy.
+        <br><br>
+        oh iya langsung ke point nya aja gak sihh —>
+        <br><br>
+        Aku tuh masih suka mikir, gimana bisa aku seberuntung ini ketemu kamu. Beneran, ketemu kamu tuh kayak nemu tempat nyaman di dunia — di mana aku bisa jadi diriku sendiri tanpa harus mikir “duh, boleh gak ya?”. Sama kamu, aku bebas dan yang paling penting, aku bahagia. Aku seneng banget ada yang mau dengerin semua yappinganku, dan lebih seneng lagi karena kamu bisa ngimbangin yappingan aku. Rasanya tuh kayak aku nggak sendirian hehhe.
+        <br><br>
+        Terus, aku mau bilang sesuatu yang penting: aku bangga banget sama kamu. Serius. Apapun yang kamu lakuin, sekecil apapun itu, aku selalu bangga. Kalau dunia ini lupa buat bilang ke kamu bahwa kamu hebat, aku janji aku bakal jadi orang pertama yang bilang: “Iyell, kamu keren banget! Kamu hebat banget!”
+        <br><br>
+        Aku bakal selalu ada di sini buat kamu, nggak peduli apa pun yang terjadi. Jadi inget ya, kamu nggak pernah sendirian. Aku akan selalu bangga sama kamu, tiap hari, tiap detik. Tetep jadi Iyell yang aku kenal yaaa iyeelll
+
+      </p>
+      <div class="signature">— missey</div>
+    </div>
+  </div>  <script>
+    const openBtn = document.getElementById('openLetter');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function openLetter(){
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden','false');
+    }
+    function closeLetter(){
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden','true');
+    }
+
+    openBtn.addEventListener('click', openLetter);
+    closeBtn.addEventListener('click', closeLetter);
+    overlay.addEventListener('click', (e)=>{ if(e.target===overlay) closeLetter(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLetter(); });
+  </script></body>
+</html>
